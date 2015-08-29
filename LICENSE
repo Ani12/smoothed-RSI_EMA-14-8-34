@@ -1,3 +1,22 @@
+
+//@version=2
+1 = close, 
+rsi_len = input(14, minval=1) 
+ema1_len = input(8, minval=1) 
+ema2_len = input(34, minval=1) 
+
+band1 = hline(70) 
+band0 = hline(30) 
+fill(band1, band0, color=purple, transp=90) 
+
+r = rsi(src, rsi_len) 
+ema1 = ema(r, ema1_len) 
+ema2 = ema(r, ema2_len) 
+plot(r, color=black) 
+plot(ema1, color=green) 
+plot(ema2, color=red)
+
+
 The MIT License (MIT)
 
 Copyright (c) 2015 Ani12

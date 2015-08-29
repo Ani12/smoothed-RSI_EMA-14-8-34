@@ -1,6 +1,7 @@
 
 //@version=2
-1 = close, 
+study("Smoothed RSI") 
+src = close, 
 rsi_len = input(14, minval=1) 
 ema1_len = input(8, minval=1) 
 ema2_len = input(34, minval=1) 
@@ -15,7 +16,6 @@ ema2 = ema(r, ema2_len)
 plot(r, color=black) 
 plot(ema1, color=green) 
 plot(ema2, color=red)
-
 
 The MIT License (MIT)
 
